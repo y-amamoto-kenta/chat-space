@@ -7,24 +7,24 @@
     width: 100%;
     background-color: #253141;
     position: relative;
+    &-content {
+      height: 50px;
+      line-height:  50px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin:auto 0;
+    }
+    &-name {
+      color: $palette-white;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 20px;
+      display: inline-block;
+      position: relative;
+    }
   }
-  &__user-content {
-    height: 50px;
-    line-height:  50px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin:auto 0;
-  }
-  &__user-name {
-    color: $palette-white;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0 20px;
-    display: inline-block;
-    position: relative;
-   }
   .fa {
   color: $palette-white;
   }
@@ -32,17 +32,17 @@
   height: 85%;
   width: 100%;
   background-color: #2f3e51;
-  }
-  &__group-content {
-   padding: 20px;
-  }
-  &__group-name {
-    font-size: 15px;
-    color: $palette-white;
-  }
-  &__group-message {
-    font-size: 11px;
-    color: $palette-white;
-    margin-top: 5px;
+    &-content {
+      padding: 20px;
+    }
+    &-name {
+      font-size: 15px;
+      color: $palette-white;
+    }
+    &-message {
+      font-size: 11px;
+      color: $palette-white;
+      margin-top: 5px;
+    }
   }
 }
