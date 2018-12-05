@@ -1,0 +1,29 @@
+.group-create
+  .group-create__name チャットグループが作成されました。
+.chat-side
+  .chat-side__user
+    .chat-side__user-content
+      .chat-side__user-name 愛知県名古屋市
+      %a{ href:'', class:'chat-side__user--new-group' }
+        %i.fa.fa-pencil-square-o
+      %a{ href:'', class:'chat-side__user--edit-user' }
+        %i.fa.fa-cog
+  =render partial: 'chat-side__group'
+.chat-main
+  .chat-main__header
+    .chat-main__header-content
+      .chat-main__header-name 名古屋グループ
+      %a{ href:'', class:'chat-main__header--edit-group' }
+        Edit
+    .chat-main__header-member MEMBER: 愛知県名古屋市
+  =render partial: 'chat-main__message'
+  .chat-main__footer
+    %form{ action:"", method:"", class:"chat-main__footer-form"}
+      .chat-main__footer-content
+        %input{type:"text", placeholder:"type a message", class:"chat-main__footer-text" }
+        %label{ class:"chat-file", for:"message-image"}
+          %input{id:"message-image", type:"file", class:"image"}
+          %i.fa.fa-image
+      %input{ type:"submit", value:"Send", class:"send"}
+
+
