@@ -1,0 +1,12 @@
+.flash {
+  .alert {
+    background-color: $palette-orange;
+    color: $palette-white;
+    text-align: center;
+  }
+  .notice {
+    background-color: $palette-blue;
+    color: $palette-white;
+    text-align: center;
+  }
+}

@@ -1,13 +1,12 @@
-.group-create
-  .group-create__name チャットグループが作成されました。
 .chat-side
   .chat-side__user
     .chat-side__user-content
-      .chat-side__user-name 愛知県名古屋市
-      %a{ href:'', class:'chat-side__user--new-group' }
-        %i.fa.fa-pencil-square-o
-      %a{ href:'', class:'chat-side__user--edit-user' }
-        %i.fa.fa-cog
+      .chat-side__user-name
+        = current_user.name
+      = link_to do
+        = fa_icon 'pencil-square-o', class: 'icon'
+      = link_to edit_user_path(current_user) do
+        = fa_icon 'cog', class: 'icon'
   =render partial: 'chat-side__group'
 .chat-main
   .chat-main__header
